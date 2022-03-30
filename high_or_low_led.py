@@ -1,3 +1,5 @@
+#The Following is the same program as the High Or Low game written in Java.
+#I rewrote this in Python when playing around with Raspberry Pi LED projects.
 
 #import Libraries
 import os
@@ -15,17 +17,13 @@ def red_flash(time_in):
     time.sleep(time_in)
     red.off()
 
-def yellow_flash(time_in):
-    yellow.on()
-    time.sleep(time_in)
-    yellow.off()
 
 def green_flash(time_in):
     green.on()
     time.sleep(time_in)
     green.off()
 
-
+#LEDs on the Pi light up red or green depending on the guess given :)
 def game_start():
     score = 0
     gameover = False
