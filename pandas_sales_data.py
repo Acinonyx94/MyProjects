@@ -27,17 +27,18 @@ sales_london.insert(4, "Dec Change", pct["Dec-18"])
 print(sales_london)
 
 print("\nTop 3 months for New York and corresponding stores:")
+sales = df.copy()
 #First extract all data for New York stores into new DataFrame
-sales_ny = df.iloc[3:5, :]
+sales_ny = sales.iloc[3:5, :]
 #Extract the max value in NY dataframe and then remove it
 first = sales_ny.stack().index[np.argmax(sales_ny.values)]
-sales_ny.replace(sales_ny.max().max(), inplace=True)
+sales_ny.replace(sales_ny.max().max(), 0, inplace=True)
 #Extract the new max value in NY dataframe (second highest) and then remove it
 second = sales_ny.stack().index[np.argmax(sales_ny.values)]
-sales_ny.replace(sales_ny.max().max(), inplace=True)
+sales_ny.replace(sales_ny.max().max(), 0, inplace=True)
 #Extract the new max value in NY dataframe (third highest) and then remove it
 third = sales_ny.stack().index[np.argmax(sales_ny.values)]
-sales_ny.replace(sales_ny.max().max(), inplace=True)
+sales_ny.replace(sales_ny.max().max(), 0, inplace=True)
 print(f"Top monthly sales was {first[1]} at the {first[0]} store.")
 print(f"Second highest monthly sales was {second[1]} at the {second[0]} store.")
 print(f"Third highest monthly sales was {third[1]} at the {third[0]} store.")
