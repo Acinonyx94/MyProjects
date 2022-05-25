@@ -31,8 +31,8 @@ heading.grid(row=0, column=0, sticky="EW")
 #Filter by team...
 teams = ("Any", "Arsenal", "Aston Villa", "Brentford", "Brighton", "Burnley",
 "Chelsea", "Crystal Palace", "Everton", "Leeds", "Leicester", "Liverpool",
-"Manchester City", "Manchester Utd", "Newcastle", "Norwich", "Southampton",
-"Tottenham", "Watford", "West Ham", "Wolves")
+"Manchester City", "Manchester United", "Newcastle United", "Norwich", "Southampton",
+"Tottenham", "Watford", "West Ham", "Wolverhampton Wanderers")
 team_label = tk.Label(root, text="Team:")
 team_label.grid(row=1, column=0, sticky="EW")
 from_team = ttk.Combobox(root, values=teams, textvariable=teams, state="readonly")
